@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makyaj Malzemeleri</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    section {
+      padding: 60px 0;
+    }
+    .jumbotron {
+      background: #007bff;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Makyaj Dünyası</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Ana Sayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#products">Ürünler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">İletişim</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Ana Sayfa (Hero Section) -->
+  <section id="home" class="jumbotron">
+    <h1 class="display-4">Makyajın En Güzel Hali</h1>
+    <p class="lead">En kaliteli makyaj malzemeleri burada sizi bekliyor!</p>
+    <a class="btn btn-light btn-lg" href="#products" role="button">Ürünlerimizi İnceleyin</a>
+  </section>
+
+  <!-- Ürünler -->
+  <section id="products">
+    <div class="container">
+      <h2 class="text-center mb-4">Öne Çıkan Ürünler</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="indir.jpg" class="card-img-top" alt="Ruj">
+            <div class="card-body">
+              <h5 class="card-title">Ruj</h5>
+              <p class="card-text">Büyük renk yelpazesi ile en sevilen rujlar.</p>
+              <a href="#contact" class="btn btn-primary">İletişime Geç</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="fondoten.jpg" class="card-img-top" alt="Fondöten">
+            <div class="card-body">
+              <h5 class="card-title">Fondöten</h5>
+              <p class="card-text">Cildinize mükemmel uyum sağlayan fondöten.</p>
+              <a href="#contact" class="btn btn-primary">İletişime Geç</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="maskara.jpg" class="card-img-top" alt="Maskara">
+            <div class="card-body">
+              <h5 class="card-title">Maskara</h5>
+              <p class="card-text">Etkileyici ve hacimli kirpikler için maskara.</p>
+              <a href="#contact" class="btn btn-primary">İletişime Geç</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İletişim -->
+  <section id="contact" class="bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Bize Ulaşın</h2>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Adınız</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-posta Adresiniz</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Mesajınız</label>
+          <textarea class="form-control" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Gönder</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2024 Makyaj Dünyası | Tüm hakları saklıdır.</p>
+  </footer>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
